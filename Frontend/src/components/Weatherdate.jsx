@@ -30,7 +30,6 @@ const Weatherdate = () => {
         const data = await response.json();
 
         if (data && data.main && data.main.temp) {
-          // Temperatura en grados Kelvin, convirtiéndola a grados Celsius
           const temperatureKelvin = data.main.temp;
           const temperatureCelsius = temperatureKelvin - 273.15;
           const tempGrados = temperatureCelsius.toFixed(0);

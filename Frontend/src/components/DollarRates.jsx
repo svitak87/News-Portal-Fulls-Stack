@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import "./DollarRates.css"; // Importar el archivo CSS para estilos y animaciones
+import "./DollarRates.css"; 
 
 const DollarRates = () => {
-  const [animationPaused, setAnimationPaused] = useState(false); // Estado para controlar la pausa de la animación
+  const [animationPaused, setAnimationPaused] = useState(false); 
   const dollarRates = useSelector((state) => state.dollarRates);
   const renderedData = dollarRates.map((item, index) => {
     return {
@@ -16,7 +16,7 @@ const DollarRates = () => {
   });
 
   const handleContainerClick = () => {
-    setAnimationPaused(!animationPaused); // Cambiar el estado de pausa de la animación al hacer clic en el contenedor
+    setAnimationPaused(!animationPaused); 
   };
 
   return (

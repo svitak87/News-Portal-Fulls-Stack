@@ -10,7 +10,6 @@ const sequelize = new Sequelize(
   }
 );
 
-// Importar y configurar el modelo User
 const User = require('../models/User')(sequelize);
 
 module.exports = { sequelize, User }; 

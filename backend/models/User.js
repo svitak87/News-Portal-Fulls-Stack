@@ -25,7 +25,7 @@ module.exports = (sequelize) => {
     },
     googleId: {
       type: DataTypes.STRING,
-      allowNull: true, // Puedes cambiar esto dependiendo de tu lógica de negocio
+      allowNull: true, 
       unique: true,
     }
   }, {

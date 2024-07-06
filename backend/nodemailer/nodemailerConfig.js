@@ -28,10 +28,10 @@ const suscribeEmail = async (name, email) => {
 const sendContactEmail = async (email, message) => {
   try {
     const info = await transporter.sendMail({
-      from: `"${email}" <${process.env.EMAIL_USER}>`, // Combine the sender's email with your own
+      from: `"${email}" <${process.env.EMAIL_USER}>`, 
       to: process.env.EMAIL_USER,
       subject: "Nuevo mensaje de contacto",
-      text: `Mensaje de: ${email}\n\n${message}`, // Include sender's email in the message body
+      text: `Mensaje de: ${email}\n\n${message}`, 
     });
     console.log("Correo electrónico enviado:", info.messageId);
   } catch (error) {

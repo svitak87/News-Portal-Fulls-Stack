@@ -1,7 +1,7 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 require('dotenv').config();
 const passport = require('passport');
-const { User } = require('../db/db'); // Importa el modelo de usuario
+const { User } = require('../db/db'); 
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
@@ -13,7 +13,6 @@ passport.use(new GoogleStrategy({
     try {
       let user = await User.findOne({ where: { googleId: profile.id } });
       if (!user) {
-        // Si el usuario no existe, créalo
         const name = profile.name.givenName + profile.name.familyName
         user = await User.create({ 
           googleId: profile.id,
@@ -28,14 +27,13 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-// Serialización del usuario
 passport.serializeUser((user, cb) => {
   process.nextTick(() => {
     cb(null, { id: user.id, username: user.username, name: user.name });
   });
 });
 
-// Deserialización del usuario
+
 passport.deserializeUser((user, cb) => {
   process.nextTick(() => {
     return cb(null, user);

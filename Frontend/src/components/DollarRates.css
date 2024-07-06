@@ -1,28 +1,28 @@
 .dollar-rates-container {
-  width: 1490px; /* Ancho fijo del contenedor */
-  overflow: hidden; /* Para ocultar el desbordamiento del contenido */
+  width: 1490px; 
+  overflow: hidden; 
   cursor: pointer;
 }
 
 @keyframes ticker {
   0% {
-    transform: translateX(10%); /* Comienza desde el lado derecho del contenedor */
+    transform: translateX(10%); 
   }
   100% {
-    transform: translateX(-100%); /* Se desplaza hacia el lado izquierdo del contenedor */
+    transform: translateX(-100%); 
   }
 }
 
 .stats {
-  white-space: nowrap; /* Para que los elementos se desplacen en una sola línea */
-  overflow: hidden; /* Para ocultar los elementos fuera del contenedor */
+  white-space: nowrap; 
+  overflow: hidden; 
 }
 
 .stats .stat {
   display: inline-block;
-  margin-right: 10px; /* Espaciado entre elementos */
+  margin-right: 10px; 
 }
 
 .animate-left-to-right {
-  animation: ticker 30s linear infinite; /* Duración de la animación y configuración */
+  animation: ticker 30s linear infinite; 
 }

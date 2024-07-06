@@ -6,7 +6,7 @@ const Argentina = async () => {
       `https://newsdata.io/api/1/news?apikey=pub_4343336c50558904fe9ce32bcf1ff8fc78c27&q=Argentina&country=ar`
     );
     const argentinaNews = response.data.results;
-    const allNews = argentinaNews.map((item) => ({ // Utiliza map para transformar los datos
+    const allNews = argentinaNews.map((item) => ({ 
         portal: item.source_url.split('').slice(8, item.source_url.length).join(''),
         title: item.title,
         url: item.link,
