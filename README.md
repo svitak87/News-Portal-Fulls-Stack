@@ -1,4 +1,4 @@
-# Portal de Noticias Full Stack con PERN
+# Portal de Noticias stack PERN
 
 <img src="./images/home.png" >
 
