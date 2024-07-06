@@ -1,6 +1,8 @@
 # Portal de Noticias Full Stack con PERN
 
-<img >
+<img src="./images/home.png" >
+
+<img src="./images/form.png">
 
 Este proyecto es un portal de noticias desarrollado utilizando el stack PERN (PostgreSQL, Express.js, React.js, Node.js). La aplicación permite a los usuarios leer y publicar noticias, así como autenticarse mediante Google Auth. La gestión de sesiones se realiza mediante JSON Web Tokens (JWT) para asegurar una experiencia de usuario segura y eficiente.
 
