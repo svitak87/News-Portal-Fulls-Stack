@@ -15,7 +15,7 @@ server.use(morgan("dev"));
 server.use(express.json())
 
 const corsOptions = {
-  origin: "http://localhost:5000", // Tu frontend
+  origin: "http://localhost:5000", 
   credentials: true
 };
 
